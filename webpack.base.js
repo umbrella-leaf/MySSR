@@ -24,4 +24,7 @@ module.exports = {
       "@": path.resolve(process.cwd(), "./src"),
     },
   },
+  stats: {
+    warnings: false
+  }
 };
