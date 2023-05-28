@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon server_build/bundle.js --watch src --ext .tsx,ts",
+    "build:client": "npx webpack build --config ./webpack.client.js --watch",
     "build:server": "npx webpack build --config ./webpack.server.js --watch"
   },
   "author": "",
