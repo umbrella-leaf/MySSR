@@ -10,7 +10,7 @@ app.get("*", (req, res) => {
   res.send(`
     <html>
       <body>
-        <div>${content}</div>
+        <div id="root">${content}</div>
        </body>
      </html>
   `);
