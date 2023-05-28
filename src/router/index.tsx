@@ -6,7 +6,7 @@ interface IRouter {
   element: JSX.Element;
 }
 
-const router: Array<IRouter> = [
+const index: Array<IRouter> = [
   {
     path: "/",
     element: <Home />,
@@ -17,4 +17,4 @@ const router: Array<IRouter> = [
   },
 ];
 
-export default router;
+export default index;
