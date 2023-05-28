@@ -5,6 +5,7 @@ import router from "@/router";
 import {Routes, Route} from "react-router-dom";
 import {StaticRouter} from "react-router-dom/server";
 import path from "path";
+import {Helmet} from "react-helmet";
 
 const app = express();
 
@@ -19,9 +20,15 @@ app.get("*", (req, res) => {
         })}
       </Routes>
     </StaticRouter>
-  )
+  );
+
+  const helmet = Helmet.renderStatic();
   res.send(`
     <html>
+      <head>
+        ${helmet.title.toString()}
+        ${helmet.meta.toString()}
+      </head>
       <body>
         <div id="root">${content}</div>
         <script src="/index.js"></script>
